@@ -33,7 +33,7 @@ export const WeatherApp = () => {
 
             humidity[0].innerHTML= data.main.humidity+" %";
             wind[0].innerHTML= data.wind.speed+" km/h";
-            temprature[0].innerHTML= Math.floor(data.main.temp - 273.15)+" °c";//math.floor(data.main.tem) to remov the decimal value
+            temprature[0].innerHTML= Math.round(data.main.temp - 273.15)+" °c";//math.round(data.main.tem)find the closest int for the double  
             location[0].innerHTML= data.name;
 
             if(data.weather[0].icon==="01d" || data.weather[0].icon==="01n")
